@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="hi.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0b1c33, #124a78);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .register-box {
+            width: 420px;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .title {
+            font-size: 30px;
+            color: #0b1c33;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        input:focus {
+            border-color: #1867a7;
+            box-shadow: 0 0 5px rgba(24,103,167,0.4);
+            outline: none;
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 13px;
+            background: #1664a3;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .btn-register:hover {
+            background: #0d3e67;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #1664a3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-box">
+
+    <p class="title">Crear Cuenta</p>
+
+    <form>
+        <div class="input-group">
+            <label>Nombre Completo</label>
+            <input type="text" placeholder="Juan Pérez" required>
+        </div>
+
+        <div class="input-group">
+            <label>Correo Electrónico</label>
+            <input type="email" placeholder="ejemplo@email.com" required>
+        </div>
+
+        <div class="input-group">
+            <label>Nombre de Usuario</label>
+            <input type="text" placeholder="Tu usuario" required>
+        </div>
+
+        <div class="input-group">
+            <label>Contraseña</label>
+            <input type="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="input-group">
+            <label>Confirmar Contraseña</label>
+            <input type="password" placeholder="••••••••" required>
+        </div>
+
+        <button class="btn-register" type="submit">Crear Cuenta</button>
+    </form>
+
+    <p class="login-link">
+        ¿Ya tienes cuenta? <a href="inicioseccion.html">Iniciar sesión</a>
+    </p>
+
+</div>
+
+</body>
+</html>

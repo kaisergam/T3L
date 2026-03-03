@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .forgot-password-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .forgot-password-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .forgot-password-container p {
+            margin-bottom: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .forgot-password-container input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .forgot-password-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .forgot-password-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password-container a {
+            display: block;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-password-container">
+        <h1>Recuperar Contraseña</h1>
+        <p>Ingresa tu correo electrónico para recibir instrucciones y restablecer tu contraseña.</p>
+        <form id="forgotPasswordForm">
+            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Enviar enlace</button>
+        </form>
+        <a href="inicioseccion.html">Volver al inicio de sesión</a>
+        <p id="mensaje" style="color: green; margin-top: 15px;"></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('forgotPasswordForm');
+        const mensaje = document.getElementById('mensaje');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+
+            // Simulación de envío de correo
+            mensaje.textContent = `Se ha enviado un enlace de recuperación a ${email}`;
+            form.reset();
+        });
+    </script>
+</body>
+</html>

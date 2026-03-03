@@ -1,0 +1,23 @@
+name = "bbb-site"
+type = "javascript"
+# Add your Cloudflare account ID here (obtainable from the dashboard)
+account_id = "01dbfaa23813de0ed498516365ee24eb"
+
+# When you run `wrangler dev` or `wrangler publish` this flag controls whether
+you get a workers.dev development domain automatically.
+workers_dev = true
+
+# Uncomment and fill in if you want to bind a route or zone for production
+# route = "https://example.com/*"
+# zone_id = ""
+
+# Configure the static site handler. By pointing `bucket` at the current
+# directory the worker will be able to serve the HTML, CSS and JS files that
+# already live at the root of the repository.
+[site]
+bucket = "."
+
+# You can leave `entry-point` empty when using the default worker.js in the
+# root. If you move the script to another folder, specify the relative path
+# here.
+# entry-point = "workers-site"

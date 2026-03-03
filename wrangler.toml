@@ -4,7 +4,7 @@ type = "javascript"
 account_id = "01dbfaa23813de0ed498516365ee24eb"
 
 # When you run `wrangler dev` or `wrangler publish` this flag controls whether
-you get a workers.dev development domain automatically.
+# you get a workers.dev development domain automatically.
 workers_dev = true
 
 # Uncomment and fill in if you want to bind a route or zone for production

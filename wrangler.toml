@@ -3,6 +3,9 @@ main = "index.js"
 account_id = "01dbfaa23813de0ed498516365ee24eb"
 workers_dev = true
 
+# Cloudflare Workers compatibility date required for publishing
+compatibility_date = "2026-03-03"
+
 # Configure the static site handler. By pointing `bucket` at the current
 # directory the worker will be able to serve the HTML, CSS and JS files that
 # already live at the root of the repository.

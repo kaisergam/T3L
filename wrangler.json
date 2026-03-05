@@ -1,6 +1,6 @@
 {
   "name": "eestn3",
-  "main": "montenegro (1).html",
+  "main": "index.js",
   "compatibility_date": "2026-03-05",
   "compatibility_flags": ["nodejs_compat"]
 }

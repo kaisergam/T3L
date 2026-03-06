@@ -1,6 +1,6 @@
 {
   "name": "t3l",
-  "main": "index.js",
+  "main": "workers-site/index.js",
   "compatibility_date": "2026-03-05",
   "compatibility_flags": ["nodejs_compat"],
   "site": {

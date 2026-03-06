@@ -49,6 +49,7 @@ export default {
     }
 
     // Si pide cualquier otra cosa (CSS, imágenes, JS), intenta buscarlo
-    return fetch(request);
+    // utilizamos el asset handler proporcionado por Workers Sites
+    return env.ASSETS.fetch(request);
   },
 };

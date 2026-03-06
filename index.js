@@ -36,7 +36,7 @@ export default {
         <h1 class="site-title">E.E.S.T Nº3 "Islas Malvinas"</h1>
       </div>
       <p class="header-subtitle">Innovación, formación y compromiso</p>
-      <a href="go.html" class="enter-btn">Ingresar</a>
+      <a href="/go.html" class="enter-btn">Ingresar</a>
     </header>
   </div>
   <script src="/js/script.js"></script>

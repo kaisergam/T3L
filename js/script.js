@@ -120,7 +120,7 @@ function mostrarTab(boton, id) {
 
 // 🔹 CARRUSEL TURISMO
 let idxTurismo = 0;
-const imagenesTurismo = ["imagen 5.jpeg", "imagen 2.jpeg", "imagen 3.jpeg"]; // agrega todas tus imágenes aquí
+const imagenesTurismo = ["/images/imagen 5.jpeg", "/images/imagen 2.jpeg", "/images/imagen 3.jpeg"]; // agrega todas tus imágenes aquí
 
 function cambiarImagenTurismo(dir) {
   idxTurismo = (idxTurismo + dir + imagenesTurismo.length) % imagenesTurismo.length;

@@ -8,10 +8,10 @@ const textosModal = [
 
 // 🔹 ARCHIVOS DEL CARRUSEL
 const imagenes = [
-  "galeria1.mp4",
-  "escuela.webp",
-  "galeria2.jpg",
-  "escuela2.jpg",
+  "/images/galeria1.mp4",
+  "/images/escuela.webp",
+  "/images/galeria2.jpg",
+  "/images/escuela2.jpg",
 ];
 
 let idx = 0;

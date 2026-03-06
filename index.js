@@ -11,7 +11,7 @@ export default {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E.E.S.T Nº3 "Islas Malvinas" - Entrada</title>
-  <link rel="stylesheet" href="montenegro.css">
+  <link rel="stylesheet" href="/css/montenegro.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     /* Estilos embebidos mínimos para asegurar que se vea algo si el CSS falla */
@@ -27,19 +27,19 @@ export default {
 <body>
   <div class="container">
     <section class="parallax-section">
-      <div class="parallax-layer" style="background-image: url('escuela.webp');"></div>
+      <div class="parallax-layer" style="background-image: url('/images/escuela.webp');"></div>
     </section>
 
     <header class="header">
       <div class="logo-container">
-        <img src="0882f75f-4f80-41ea-84e8-32808b346a27.JPG" alt="Logo E.E.S.T Nº3" class="logo-img">
+        <img src="/images/0882f75f-4f80-41ea-84e8-32808b346a27.JPG" alt="Logo E.E.S.T Nº3" class="logo-img">
         <h1 class="site-title">E.E.S.T Nº3 "Islas Malvinas"</h1>
       </div>
       <p class="header-subtitle">Innovación, formación y compromiso</p>
       <a href="go.html" class="enter-btn">Ingresar</a>
     </header>
   </div>
-  <script src="script.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>`;
 

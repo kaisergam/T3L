@@ -5,5 +5,5 @@ account_id = "01dbfaa23813de0ed498516365ee24eb"
 workers_dev = true
 
 [assets]
-directory = "."
+directory = "Public"
 binding = "ASSETS"

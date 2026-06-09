@@ -20,13 +20,15 @@ function getContentType(pathname) {
 
 function candidatePaths(pathname) {
   if (pathname === '/') {
-    return ['/Public/index.html'];
+    return ['/index.html', '/Public/index.html'];
   }
 
   const cleanPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
   const candidates = [cleanPath];
 
-  if (!cleanPath.startsWith('/Public/')) {
+  if (cleanPath.startsWith('/Public/')) {
+    candidates.push(cleanPath.replace('/Public', ''));
+  } else {
     candidates.push(`/Public${cleanPath}`);
   }
 
@@ -70,13 +72,7 @@ export default {
         return new Response('Not found', { status: 404 });
       }
 
-      const data = await response.arrayBuffer();
-      return new Response(data, {
-        headers: {
-          'content-type': getContentType(resolvedPath || url.pathname),
-          'cache-control': 'public, max-age=3600',
-        },
-      });
+      return response;
     } catch (error) {
       return new Response('Worker error', { status: 500 });
     }

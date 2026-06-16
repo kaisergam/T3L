@@ -9,7 +9,8 @@
     <style>
         /* ==================== ESTILOS DE LA PANCARTA ==================== */
         #pancarta {
-            max-width: 1200px;
+            width: var(--content-width);
+            max-width: none;
             margin: 30px auto;
             padding: 20px;
             background: transparent !important;
@@ -20,7 +21,7 @@
 
         .cuadro {
             width: 100%;
-            max-width: 820px;
+            max-width: none;
             margin: 30px auto;
             border-collapse: separate;
             border-spacing: 12px;
@@ -188,6 +189,25 @@
         @keyframes pulse {
             0%, 100% { background-color: rgba(211, 47, 47, 0.2); }
             50% { background-color: rgba(211, 47, 47, 0.4); }
+        }
+
+        @media (max-width: 768px) {
+            #pancarta {
+                width: var(--content-width-mobile);
+            }
+
+            .cuadro,
+            .cuadro tbody,
+            .cuadro tr,
+            .cuadro td {
+                display: block;
+                width: 100%;
+            }
+
+            .cuadro td {
+                min-width: 0;
+                min-height: 150px;
+            }
         }
     </style>
 </head>

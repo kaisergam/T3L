@@ -1,0 +1,232 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Noticias - EEST Nº3 Islas Malvinas</title>
+
+<link rel="stylesheet" href="Styles/hi.css">
+
+<style>
+
+/* ==================== PANCARTA ==================== */
+
+#pancarta{
+    width:100%;
+    max-width:1500px;
+    margin:50px auto;
+    padding:20px;
+}
+
+#pancarta h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2.5rem;
+}
+
+.cuadro{
+    width:100%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    border:14px double var(--accent-blue);
+    box-shadow:0 20px 45px rgba(10,24,40,.3);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.cuadro td{
+    width:50%;
+    padding:40px 25px;
+    border:10px double var(--accent-blue);
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.96),
+        rgba(240,245,250,.92)
+    );
+
+    text-align:center;
+    vertical-align:top;
+
+    transition:.3s;
+}
+
+.cuadro td:hover{
+    background:linear-gradient(
+        180deg,
+        var(--accent-gold),
+        #f0d9a0
+    );
+}
+
+.cuadro td img{
+    display:block;
+    width:100%;
+    max-width:500px;
+    height:300px;
+    object-fit:cover;
+
+    margin:0 auto 20px auto;
+
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.panel-titulo{
+    text-align:center;
+    font-size:2rem;
+    color:var(--accent-blue);
+    margin:15px auto;
+}
+
+.panel-texto{
+    text-align:center;
+    font-size:1.15rem;
+    line-height:1.7;
+    color:#333;
+
+    max-width:500px;
+    margin:auto;
+
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+}
+
+/* ==================== CELULAR ==================== */
+
+@media (max-width:768px){
+
+    #pancarta{
+        padding:10px;
+    }
+
+    #pancarta h2{
+        font-size:2rem;
+    }
+
+    .cuadro,
+    .cuadro tbody,
+    .cuadro tr,
+    .cuadro td{
+        display:block;
+        width:100%;
+    }
+
+    .cuadro td{
+        padding:25px 15px;
+        box-sizing:border-box;
+    }
+
+    .cuadro td img{
+        width:100%;
+        max-width:320px;
+        height:220px;
+        margin:auto;
+    }
+
+    .panel-titulo{
+        font-size:1.4rem;
+    }
+
+    .panel-texto{
+        max-width:320px;
+        width:100%;
+        font-size:1rem;
+        margin:15px auto 0 auto;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container header-container">
+
+        <img src="Assets/tecnica3.jpg"
+             alt="Logo del colegio"
+             class="logo">
+
+        <h1>EEST Nº3 "Islas Malvinas"</h1>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="noticias.html" class="is-active">Noticias</a></li>
+                <li><a href="CONTACTO.HTML">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<section id="pancarta">
+
+    <h2>Pancarta de Noticias</h2>
+
+    <table class="cuadro">
+
+        <tr>
+            <td id="celda1"></td>
+            <td id="celda2"></td>
+        </tr>
+
+        <tr>
+            <td id="celda3"></td>
+            <td id="celda4"></td>
+        </tr>
+
+    </table>
+
+</section>
+
+<script>
+
+function renderizarCelda(titulo,texto,imagen,idCelda){
+
+    document.getElementById(idCelda).innerHTML = `
+        <img src="${imagen}" alt="${titulo}">
+        <h3 class="panel-titulo">${titulo}</h3>
+        <div class="panel-texto">${texto}</div>
+    `;
+}
+
+renderizarCelda(
+    "Taller de Programación",
+    "Los estudiantes desarrollan proyectos utilizando HTML, CSS y JavaScript. Durante las clases aprenden a diseñar páginas web modernas, crear interfaces atractivas y resolver problemas mediante programación.",
+    "Assets/programacion.jpg",
+    "celda1"
+);
+
+renderizarCelda(
+    "Prácticas Profesionalizantes",
+    "Las prácticas permiten a los alumnos aplicar los conocimientos adquiridos en situaciones reales, fortaleciendo habilidades técnicas, responsabilidad y trabajo en equipo.",
+    "Assets/practicas.jpg",
+    "celda2"
+);
+
+renderizarCelda(
+    "Laboratorio de Electrónica",
+    "En el laboratorio los estudiantes realizan experiencias con circuitos, componentes electrónicos y sistemas automatizados, integrando teoría y práctica.",
+    "Assets/electronica.jpg",
+    "celda3"
+);
+
+renderizarCelda(
+    "Proyectos Institucionales",
+    "La escuela impulsa actividades tecnológicas, científicas y comunitarias que fomentan la creatividad, la innovación y el compromiso de los estudiantes.",
+    "Assets/proyecto.jpg",
+    "celda4"
+);
+
+</script>
+
+</body>
+</html>
+```

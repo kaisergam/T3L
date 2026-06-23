@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrar noticias - E.E.S.T N°3 Islas Malvinas</title>
+    <title>Administrar noticias - E.E.S.T Nº3 Islas Malvinas</title>
     <link rel="stylesheet" href="Styles/hi.css">
     <style>
         body.news-admin-page {
@@ -22,7 +22,7 @@
         }
 
         .admin-shell {
-            width: min(calc(100vw - 24px), 1780px);
+            width: min(calc(100% - 24px), 1780px);
             margin: 0 auto 24px;
             padding: 18px;
             background: rgba(245, 248, 252, 0.78);
@@ -77,7 +77,7 @@
 
         .admin-layout {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
+            grid-template-columns: minmax(0, 1fr) minmax(min(100%, 340px), 430px);
             gap: 18px;
             align-items: start;
         }
@@ -106,14 +106,14 @@
 
         #adminList {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
         }
 
         .news-admin-item {
             display: grid;
-            grid-template-rows: 135px auto;
+            grid-template-rows: clamp(120px, 18vw, 150px) auto;
             gap: 0;
-            min-height: 310px;
+            min-height: 0;
             padding: 0;
             border-right: 6px double rgba(16, 59, 102, 0.72);
             border-bottom: 6px double rgba(16, 59, 102, 0.72);
@@ -243,11 +243,12 @@
 
         .form-buttons {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
         .form-buttons button {
-            flex: 1;
+            flex: 1 1 150px;
         }
 
         .empty-admin {
@@ -275,6 +276,11 @@
                 margin-top: 12px;
             }
 
+            .admin-button {
+                flex: 1 1 160px;
+                text-align: center;
+            }
+
             .admin-layout {
                 grid-template-columns: 1fr;
             }
@@ -287,7 +293,7 @@
 
             .news-admin-item {
                 grid-template-columns: 1fr;
-                grid-template-rows: 190px auto;
+                grid-template-rows: clamp(160px, 48vw, 220px) auto;
                 border-right: 0;
             }
 
@@ -302,7 +308,7 @@
     <header>
         <div class="container header-container">
             <img src="Assets/tecnica3.png" alt="Logo del colegio" class="logo">
-            <h1>E.E.S.T N°3 "Islas Malvinas"</h1>
+            <h1>E.E.S.T Nº3 "Islas Malvinas"</h1>
             <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -390,9 +396,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 E.E.S.T N°3 "Islas Malvinas" - Remedios de Escalada, Lanús</p>
+        <p>&copy; 2025 E.E.S.T Nº3 "Islas Malvinas" - Remedios de Escalada, Lanús</p>
         <p><em>"Enseñamos profesiones, inspiramos personas."</em></p>
-        <p class="footer-credit">Hecha con <span class="heart">♥</span> por los cursos de informática 2025-actualidad</p>
+        <p class="footer-credit">Hecha con <span class="heart">♥</span> por los cursos de Programación 2025-actualidad</p>
     </footer>
 
     <script src="ui.js"></script>
